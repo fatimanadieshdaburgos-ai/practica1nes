@@ -43,6 +43,14 @@ async function seedDatabase(): Promise<void> {
         role: Role.USER,
         tenantID: tenantCreado.id, 
       },
+       {
+        email: `admin1_${tenantCreado.id}@example.com`,
+        name: `Administrador ${tenantCreado.name}`,
+        password: 'abc123',
+        telephone: '7777-1230',
+        role: Role.ADMIN,
+        tenantID: tenantCreado.id, 
+      },
     ];
 
     for (const cuenta of cuentas) {
